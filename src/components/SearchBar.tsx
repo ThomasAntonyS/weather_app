@@ -11,7 +11,6 @@ const SearchBar: FC<Props> = ({ onSearch, currentCity }) => {
   const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
   const [inputValue, setInputValue] = useState('');
-  const [valueChange, setValueChange] = useState(false);
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -28,7 +27,6 @@ const SearchBar: FC<Props> = ({ onSearch, currentCity }) => {
 
   const triggerSearch = () => {
     if (inputValue.trim()) {
-      setValueChange(true)
       onSearch(inputValue.trim());
       setInputValue('');
     }
@@ -48,7 +46,7 @@ const SearchBar: FC<Props> = ({ onSearch, currentCity }) => {
     <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full mx-auto py-4">
       <div className="flex items-center text-lg md:text-xl font-semibold text-gray-200 order-1 md:order-1 flex-shrink-0">
         <MapPin size={20} className="mr-2 text-white" />
-        <span className="truncate max-w-[120px] sm:max-w-none">{currentCity} <span className=' text-[0.6rem]'>{(valueChange)?null:`(Default)`}</span></span>
+        <span className="truncate max-w-[120px] sm:max-w-none">{currentCity} </span>
       </div>
 
       <div className="flex items-stretch w-full max-w-sm md:max-w-md lg:max-w-lg order-2 md:order-2 px-0 sm:px-4 md:px-0">

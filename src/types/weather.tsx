@@ -1,4 +1,5 @@
-// types/weather.ts
+// src/types/weather.ts
+
 export interface WeatherData {
   coord: {
     lon: number;
@@ -18,42 +19,37 @@ export interface WeatherData {
     temp_max: number;
     pressure: number;
     humidity: number;
-    sea_level?: number; // Optional
-    grnd_level?: number; // Optional
+    sea_level?: number; 
+    grnd_level?: number;
   };
   visibility: number; // in meters
   wind: {
-    speed: number; // in m/s, convert to km/h in component
+    speed: any;
     deg: number;
-    gust?: number; // Optional
+    gust?: number; 
   };
   clouds: {
     all: number;
   };
-  dt: number; // Unix timestamp
+  dt: number;
   sys: {
     type: number;
     id: number;
-    country: string; // Country code (e.g., "US", "GB")
-    sunrise: number; // Unix timestamp
-    sunset: number; // Unix timestamp
+    country: string; 
+    sunrise: number; 
+    sunset: number; 
   };
   timezone: number;
-  id: number; // City ID
-  name: string; // City name
+  id: number; 
+  name: string; 
   cod: number;
-  // UV index is often a separate API call or not in the default 'weather' endpoint.
-  // If you get it from another source, you'd add it here.
-  // uvi?: number;
 }
 
-// OpenWeatherMap forecast response structure often has a 'list' of objects
-// that are similar to WeatherData, plus a 'city' object.
 export interface ForecastData {
   cod: string;
   message: number;
   cnt: number;
-  list: WeatherData[]; // Array of forecast data points
+  list: WeatherData[];
   city: {
     id: number;
     name: string;
@@ -67,4 +63,28 @@ export interface ForecastData {
     sunrise: number;
     sunset: number;
   };
+}
+
+// Interface for Air Quality Data (from /air_pollution API endpoint)
+export interface AirQualityData {
+  coord: {
+    lon: number;
+    lat: number;
+  };
+  list: Array<{
+    main: {
+      aqi: number; 
+    };
+    components: {
+      co: number;
+      no: number; 
+      no2: number;
+      o3: number;
+      so2: number;
+      pm2_5: number; 
+      pm10: number; 
+      nh3: number; 
+    };
+    dt: number; 
+  }>;
 }
