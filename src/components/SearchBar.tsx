@@ -58,6 +58,7 @@ const SearchBar: FC<Props> = ({ onSearch, currentCity }) => {
             value={inputValue}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
+            spellCheck={true}
             className="flex-grow py-3 px-10 rounded-l-xl bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md w-full"
           />
         </div>

@@ -1,8 +1,8 @@
 import { type FC } from 'react';
 import { type WeatherData } from '../types/weather';
 import { type AirQualityData } from '../types/weather';
-import { Sunrise, Sunset } from 'lucide-react';
-import { Smile, Meh, Frown, CloudDrizzle, Skull } from 'lucide-react';
+import { Laugh, Sunrise, Sunset } from 'lucide-react';
+import { Smile, Meh, Frown, Skull } from 'lucide-react';
 
 const getAQIColor = (aqi: number) => {
   if (aqi <= 1) return  'bg-green-500 text-green-300';
@@ -14,10 +14,10 @@ const getAQIColor = (aqi: number) => {
 
 const getAQIIcon = (aqi: number) => {
   switch (aqi) {
-    case 1: return <Smile size={36} />;
-    case 2: return <Meh size={36} />;
-    case 3: return <Frown size={36} />;
-    case 4: return <CloudDrizzle size={36} />;
+    case 1: return <Laugh size={36} />;
+    case 2: return <Smile size={36} />;
+    case 3: return <Meh size={36} />;
+    case 4: return <Frown size={36} />;
     case 5: return <Skull size={36} />;
     default: return <Meh size={36} />;
   }
