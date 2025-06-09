@@ -46,7 +46,7 @@ function MapSection({ data }: MapSectionProps) {
   return (
     <div className="space-y-4">
       <div className="block space-y-3 sm:flex justify-between items-center">
-        <p className="text-2xl text-gray-400">Current Layer: {currentLayer.label}</p>
+        <p className="text-2xl text-white font-semibold "><span className='border-b-[3px] border-white'>Current Layer:</span> {currentLayer.label}</p>
       </div>
 
       <div className="h-80 w-full rounded-xl overflow-hidden border border-gray-700 shadow-lg">
