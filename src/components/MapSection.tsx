@@ -15,6 +15,7 @@ const layers = [
   { id: 'temp_new', label: 'Temperature' },
   { id: 'clouds_new', label: 'Clouds' },
   { id: 'precipitation_new', label: 'Precipitation (Rain-Clouds)' },
+  { id: 'pressure_new', label: 'Sea Level Pressure' },
 ] as const;
 
 function MapSection({ data }: MapSectionProps) {
@@ -46,7 +47,7 @@ function MapSection({ data }: MapSectionProps) {
   return (
     <div className="space-y-4">
       <div className="block space-y-3 sm:flex justify-between items-center">
-        <p className="text-2xl text-white font-semibold "><span className='border-b-[3px] border-white'>Current Layer:</span> {currentLayer.label}</p>
+        <p className="text-2xl text-white font-semibold "><span className='underline border-white'>Current Layer</span>: {currentLayer.label}</p>
       </div>
 
       <div className="h-80 w-full rounded-xl overflow-hidden border border-gray-700 shadow-lg">
@@ -57,6 +58,7 @@ function MapSection({ data }: MapSectionProps) {
 
           <TileLayer
             url={`https://tile.openweathermap.org/map/${currentLayer.id}/{z}/{x}/{y}.png?appid=${API_KEY}`}
+            attribution='&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>'
           />
 
           <Marker position={[lat, lon]} icon={customIcon}>
