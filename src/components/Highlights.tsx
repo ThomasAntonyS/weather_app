@@ -78,20 +78,6 @@ const Highlights: FC<HighlightsProps> = ({ data, airQuality }) => {
           </p>
         </div>
 
-        {/* Sunrise */}
-        <div className="bg-gray-800 rounded-xl p-5 flex flex-col items-center justify-between text-center border border-gray-700 hover:border-blue-500 transition-all duration-300">
-          <p className="text-sm text-gray-300">Sunrise</p>
-          <Sunrise className="w-20 h-10 my-3 text-yellow-400" />
-          <p className="text-2xl font-bold text-gray-100">{sunrise}</p>
-        </div>
-
-        {/* Sunset */}
-        <div className="bg-gray-800 rounded-xl p-5 flex flex-col items-center justify-between text-center border border-gray-700 hover:border-blue-500 transition-all duration-300">
-          <p className="text-sm text-gray-300">Sunset</p>
-          <Sunset className="w-20 h-10 my-3 text-orange-500" />
-          <p className="text-2xl font-bold text-gray-100">{sunset}</p>
-        </div>
-
         {/* Visibility */}
         <div className="bg-gray-800 rounded-xl p-5 flex flex-col justify-between items-start border border-gray-700 hover:border-blue-500 transition-all duration-300">
           <p className="text-sm text-gray-300">Visibility</p>
@@ -122,6 +108,24 @@ const Highlights: FC<HighlightsProps> = ({ data, airQuality }) => {
                 style={{ width: `${(aqi / 5) * 100}%` }}
               ></div>
             </div>
+          </div>
+        </div>
+
+        {/* Sunrise */}
+        <div className="bg-gray-800 rounded-xl p-6 flex flex-row items-center justify-around text-center border border-gray-700 hover:border-blue-500 transition-all duration-300">
+          <Sunrise className="w-24 h-20 my-3 text-yellow-400" />
+          <div>
+            <p className="text-lg text-gray-300">Sunrise</p>
+            <p className="text-3xl font-bold text-gray-100">{sunrise}</p>
+          </div>
+        </div>
+
+        {/* Sunset */}
+        <div className="bg-gray-800 rounded-xl p-6 flex flex-row items-center justify-around text-center border border-gray-700 hover:border-blue-500 transition-all duration-300">
+          <Sunset className="w-24 h-20 my-3 text-yellow-400" />
+          <div>
+            <p className="text-lg text-gray-300">Sunset</p>
+            <p className="text-xl font-bold text-gray-100">{sunset}</p>
           </div>
         </div>
       </div>
