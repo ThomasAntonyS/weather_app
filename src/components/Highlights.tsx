@@ -125,7 +125,7 @@ const Highlights: FC<HighlightsProps> = ({ data, airQuality }) => {
           <Sunset className="w-24 h-20 my-3 text-yellow-400" />
           <div>
             <p className="text-lg text-gray-300">Sunset</p>
-            <p className="text-xl font-bold text-gray-100">{sunset}</p>
+            <p className="text-3xl font-bold text-gray-100">{sunset}</p>
           </div>
         </div>
       </div>
