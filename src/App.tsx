@@ -64,7 +64,7 @@ function App() {
       <SearchBar onSearch={setCity} currentCity={city} />
 
       {isLoading ? (
-        <div className="flex-grow flex flex-col items-center justify-center text-xl text-gray-400">
+        <div className="flex-grow flex flex-col items-center justify-center w-full text-center text-xl text-gray-400">
           <Hatch size="28" stroke="4" speed="3.5" color="white" />
           <p className="mt-4">Loading weather data for {city}...</p>
         </div>
