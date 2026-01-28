@@ -11,7 +11,7 @@ const CurrentWeather: FC<{ data: WeatherData }> = ({ data }) => {
   });
 
   return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl w-full text-white shadow-2xl flex flex-col items-center">
+    <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl w-full text-white flex flex-col items-center">
       <div className="text-sm text-gray-300 mb-2">{date}</div>
       <h2 className="text-4xl md:text-5xl font-extrabold text-blue-300 text-center mb-1">
         {data.name}

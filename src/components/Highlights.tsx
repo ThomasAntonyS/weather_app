@@ -56,7 +56,7 @@ const Highlights: FC<HighlightsProps> = ({ data, airQuality }) => {
   const colorClass = getAQIColor(aqi);
 
   return (
-    <div className="bg-gray-900 p-6 rounded-2xl text-white shadow-lg">
+    <div className="bg-gray-900 p-6 rounded-2xl text-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Wind Status */}
         <div className="bg-gray-800 rounded-xl p-5 flex flex-col justify-between items-start border border-gray-700 hover:border-blue-500 transition-all duration-300">

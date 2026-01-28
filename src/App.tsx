@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getWeatherByCity, getForecastByCity, getAirQualityByCity } from './api/weather';
+import { getWeatherByCity, getForecastByCity, getAirQuality } from './api/weather';
 import { type WeatherData, type AirQualityData } from './types/weather';
 import CurrentWeather from './components/CurrentWeather';
 import SearchBar from './components/SearchBar';
@@ -35,7 +35,7 @@ function App() {
     try {
       const weatherData = await getWeatherByCity(cityName);
       const forecastData = await getForecastByCity(cityName);
-      const airQualityData = await getAirQualityByCity(weatherData.coord.lat, weatherData.coord.lon);
+      const airQualityData = await getAirQuality(weatherData.coord.lat, weatherData.coord.lon);
 
       setWeather(weatherData);
       setForecast(forecastData.list);

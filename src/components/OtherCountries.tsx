@@ -11,7 +11,7 @@ interface OtherCountriesProps {
 
 const OtherCountries: FC<OtherCountriesProps> = ({ cities, onCitySelect }) => {
   return (
-    <div className="bg-gray-900 text-white p-6 rounded-2xl shadow-xl">
+    <div className="bg-gray-900 text-white p-6 rounded-2xl ">
       <div className="flex justify-between items-center mb-5">
         <h3 className="text-2xl font-bold">Other Major Cities</h3>
       </div>
