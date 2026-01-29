@@ -66,7 +66,7 @@ function MapSection({ data }: MapSectionProps) {
               currentLayer.id === 'temp_new' 
                 ? 'bg-gradient-to-r from-[#2d0d32] from-10% via-[#3befff] via-50% to-[#542f0f] to-90%' 
                     : currentLayer.id === 'precipitation_new' 
-                    ? 'bg-[#232353]' 
+                    ? 'bg-gradient-to-r from-transparent to-[#232353]' 
                     : 'bg-gradient-to-r from-gray-800 via-gray-400 via-50% to-white'
             }`} />
             <div className="flex justify-between items-center px-0.5 text-[10px] font-medium text-gray-500 uppercase">
