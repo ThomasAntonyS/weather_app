@@ -158,7 +158,7 @@ const SearchBar: FC<Props> = ({ onSearch, currentCity }) => {
         </button>
       </div>
 
-      <div className="flex flex-col items-center md:items-end order-3 md:order-3 min-w-[120px]">
+      <div className="hidden lg:flex flex-col items-center md:items-end order-3 md:order-3 min-w-[120px]">
         <p className="text-2xl font-black text-white tracking-tight">{currentTime} <span className='text-xs'>(IST)</span></p>
         <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider">{currentDate}</p>
       </div>
